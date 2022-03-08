@@ -1,0 +1,32 @@
+kremzeek@kremzeek-UX31A:~/PycharmProjects/BlogFlaskUsers$ sqlite3 blog.db 
+SQLite version 3.31.1 2020-01-27 19:55:54
+Enter ".help" for usage hints.
+sqlite> 
+kremzeek@kremzeek-UX31A:~/PycharmProjects/BlogFlaskUsers$ echo ".schema"  | sqlite3 blog.db 
+CREATE TABLE IF NOT EXISTS "blog_posts" (
+        "id"    INTEGER NOT NULL,
+        "title" VARCHAR(250) NOT NULL,
+        "subtitle"      VARCHAR(250) NOT NULL,
+        "date"  VARCHAR(250) NOT NULL,
+        "body"  TEXT NOT NULL,
+        "img_url"       VARCHAR(250) NOT NULL,
+        "author"        VARCHAR(250) NOT NULL,
+        UNIQUE("title"),
+        PRIMARY KEY("id")
+);
+
+kremzeek@kremzeek-HP-EliteDesk-800-G1-USDT:~/PycharmProjects/FlaskAuthDay68$ cat schema.txt 
+kremzeek@kremzeek-HP-EliteDesk-800-G1-USDT:~/PycharmProjects/FlaskAuthDay68$ sqlite3 users.db
+SQLite version 3.31.1 2020-01-27 19:55:54
+Enter ".help" for usage hints.
+sqlite> .schema
+CREATE TABLE user (
+        id INTEGER NOT NULL,
+        email VARCHAR(100),
+        password VARCHAR(100),
+        name VARCHAR(1000),
+        PRIMARY KEY (id),
+        UNIQUE (email)
+);
+sqlite>
+
